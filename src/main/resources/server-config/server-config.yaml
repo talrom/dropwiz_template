@@ -16,3 +16,27 @@ server:
   adminConnectors:
   - type: http
     port: 9001
+
+secret: "<add your secret here>"
+logging:
+  level: INFO
+  loggers:
+    io.dropwizard: INFO
+    org.eclipse.jetty: INFO
+    "il.tr":
+      level: DEBUG
+      appenders:
+        - type: file
+          currentLogFilename: target/log/server.log
+          threshold: ALL
+          archive: true
+          archivedLogFilenamePattern: target/log/server-%d.log
+          archivedFileCount: 5
+          timeZone: UTC
+          logFormat: # TODO
+  appenders:
+    - type: console
+      threshold: ALL
+      timeZone: UTC
+      target: stdout
+      logFormat: # TODO
