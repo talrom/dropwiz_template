@@ -10,7 +10,7 @@ server:
   - type: https
     port: 8443
     keyStorePath: src/main/resources/server.keystore
-    keyStorePassword: "password"
+    keyStorePassword: "<password>"
     validateCerts: false
     validatePeers: false
   adminConnectors:
